@@ -99,16 +99,6 @@ const freemaninit = (function() {
                 }, 300)
             });
         });
-        // for window scroll spy event
-        window.onscroll = (() => {
-            mainSection.forEach((v, i) => {
-                let rect = v.getBoundingClientRect().y
-                if (rect < window.innerHeight - 100) {
-                    menuSection.forEach(v => v.classList.remove('activelink'));
-                    menuSection[i].classList.add('activelink');
-                }
-            });
-        });
     };
     //animated typed init ------------------------
     const erase = function(e) {
