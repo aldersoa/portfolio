@@ -32,7 +32,7 @@ const freemaninit = (function() {
     var cursor = document.querySelector(".cursor");
     var textArrayIndex = 0;
     var charIndex = 0;
-    var textArray = ["UI/UX Design.", " Web Developer.", "Product Design.", "Digital Marketing."];
+    var textArray = ["Product Designer", "UX Researcher", "Design Engineer"];
     var year = new Date().getFullYear();
     var revealPoint = 150;
     var interval = 0;
@@ -58,12 +58,6 @@ const freemaninit = (function() {
         any: function() {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
-    };
-    // loadder page
-    const loadder = function(e) {
-        setTimeout(() => {
-            document.querySelector(".preloader").style.display = "none";
-        }, 1000);
     };
     // GLightbox
     const glight = function(e) {
@@ -323,11 +317,6 @@ const freemaninit = (function() {
             // allways force page to scroll top on refresh
             window.scrollTo(0, 0);
         };
-        // window load
-        window.addEventListener('load', (e) => {
-            // page load
-            loadder();
-        });
         // document load
         window.addEventListener('DOMContentLoaded', (e) => {
             // button event 
