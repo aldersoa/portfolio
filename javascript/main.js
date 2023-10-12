@@ -312,38 +312,24 @@ const freemaninit = (function() {
 
             const currentUrl = window.location.href;
             //console.log(currentUrl);
-            if (currentUrl.includes("portfolio.html")){
+            if (currentUrl.includes("index.html")) {
+                // button event 
+                buttonclick();
+                //type animation 
+                typeanimation();
+                // year 
+                yearele.innerHTML = year;
+            } else if (currentUrl.includes("portfolio.html")){
                 // button event 
                 buttonclick();
                 // portfolio 
                 portofolio();
                 // glightbox 
-                glight();
-                // year 
-                yearele.innerHTML = year;
-            } else if (currentUrl.includes("index.html")) {
-                // button event 
-                buttonclick();
-                //type animation 
-                typeanimation();
-                // slider service 
-                servicesslider();
-                // portfolio 
                 glight();
                 // year 
                 yearele.innerHTML = year;
             } else {
-                // button event 
-                buttonclick();
-                //type animation 
-                typeanimation();
-                // slider service 
-                servicesslider();
                 // portfolio 
-                portofolio();
-                // glightbox 
-                glight();
-                // year 
                 yearele.innerHTML = year;
             }
         });
